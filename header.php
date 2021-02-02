@@ -1,3 +1,7 @@
+<?php 
+$appuntamento = get_field('navbar-button')
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
   <head>
@@ -10,16 +14,9 @@
       content="Mashup templates have been developped by Orson.io team"
       name="author"
     />
+    <title><?php bloginfo('name') ?></title>
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no" />
-
-    <link href="./assets/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="./assets/favicon.ico" rel="icon" />
-
-    <title>Title page</title>
-
-    <link href="./style.css" rel="stylesheet" />
+    <?php  wp_head(); ?>
   </head>
 
   <body>
@@ -46,7 +43,7 @@
                   href="./index.html#contact-section-container"
                   title=""
                   class="btn btn-default navbar-btn"
-                  >Contact Us</a
+                  ><?php echo $appuntamento ?></a
                 >
               </li>
             </ul>

@@ -1,12 +1,3 @@
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function (event) {
-        googleMapInit();
-        scrollToAnchor();
-        scrollRevelation('reveal');
-      });
-    </script>
-
 <footer class="footer-container white-text-container">
       <div class="container">
         <div class="row">
@@ -36,16 +27,8 @@
             <div>
               <p>
                 <small
-                  >© Untitled | Website created with
-                  <a
-                    href="http://www.mashup-template.com/"
-                    title="Create website with free html template"
-                    >Mashup Template</a
-                  >/<a
-                    href="https://www.unsplash.com/"
-                    title="Beautiful Free Images"
-                    >Unsplash</a
-                  ></small
+                  >© Cezary Bek | 2021
+                </small
                 >
               </p>
             </div>
@@ -68,13 +51,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function (event) {
-        navbarToggleSidebar();
-      });
-    </script>
-
-    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

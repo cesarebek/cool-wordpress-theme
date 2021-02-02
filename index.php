@@ -1,30 +1,69 @@
-<?php get_header() ?>
+<?php 
+
+//Advanced Custom Fields
+$header_background_image = get_field('header_background'); 
+$header_button = get_field('header_button'); 
+//
+$motto = get_field('motto'); 
+$titolo_motto_1 = get_field('titolo_motto_1'); 
+$titolo_motto_2 = get_field('titolo_motto_2'); 
+$titolo_motto_3 = get_field('titolo_motto_3'); 
+$descrizione_motto_1 = get_field('descrizione_motto_1'); 
+$descrizione_motto_2 = get_field('descrizione_motto_2'); 
+$descrizione_motto_3 = get_field('descrizione_motto_3'); 
+//
+$middle_section_background = get_field('middle_section_background');
+$middle_section_title = get_field('middle_section_title');
+$middle_section_subtitle = get_field('middle_section_subtitle');
+$middle_section_para_1 = get_field('middle_section_para_1');
+$middle_section_para_2 = get_field('middle_section_para_2');
+$middle_section_para_3 = get_field('middle_section_para_3');
+$middle_section_vertical_title = get_field('middle_section_vertical_title');
+//
+$phone = get_field('phone');
+$email = get_field('email');
+$address = get_field('address');
+$open_hours = get_field('open_hours');
+//
+$salon_main_title = get_field('salon_title');
+$salon_description_1 = get_field('salon_description_1');
+$salon_description_2 = get_field('salon_description_2');
+$salon_description_3 = get_field('salon_description_3');
+$salon_image_1 = get_field('salon_image_1');
+$salon_image_2 = get_field('salon_image_2');
+$salon_image_3 = get_field('salon_image_3');
+$salon_title_1 = get_field('salon_title_1');
+$salon_title_2 = get_field('salon_title_2');
+$salon_title_3 = get_field('salon_title_3');
+
+get_header(); ?>
 <div
-      class="background-image-container white-text-container"
-      style="background-image: url('./assets/images/img-05.jpg')"
-    >
+  class="background-image-container white-text-container"
+  style="background-image: url('<?php echo $header_background_image['url']?>')"
+  >
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1>The Factory</h1>
-            <p class="">THE BEST PLACE FOR WORK TOGETHER</p>
+            <h1><?php bloginfo('name') ?></h1>
+            <p class=""><?php bloginfo('description') ?></p>
             <a
               href="#contact-section-container"
               class="btn btn-primary btn-lg anchor-link"
               title=""
-              >Get in touch</a
+              ><?php echo $header_button ?></a
             >
           </div>
         </div>
       </div>
     </div>
 
+//Slogan Section
     <div class="section-container">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-12 section-container-spacer">
-            <h2 class="text-center">Vivamus laoreet</h2>
+            <h2 class="text-center"><?php echo $motto ?></h2>
           </div>
         </div>
         <div class="row">
@@ -32,128 +71,92 @@
             <div class="fa-container">
               <i class="fa fa-comment-o fa-3x" aria-hidden="true"></i>
             </div>
-            <h3 class="text-center">Consectetur</h3>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
-            </p>
+            <h3 class="text-center"><?php echo $titolo_motto_1 ?></h3>
+            <p> <?php echo $descrizione_motto_1 ?></p>
           </div>
-
           <div class="col-xs-12 col-md-4">
             <div class="fa-container">
               <i class="fa fa-heart-o fa-3x" aria-hidden="true"></i>
             </div>
-            <h3 class="text-center">Malesuada</h3>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <h3 class="text-center"><?php echo $titolo_motto_2 ?></h3>
+            <p> <?php echo $descrizione_motto_2 ?></p>
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="fa-container">
               <i class="fa fa-bell-o fa-3x" aria-hidden="true"></i>
             </div>
-            <h3 class="text-center">Phasellus</h3>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <h3 class="text-center"><?php echo $titolo_motto_3 ?></h3>
+            <p><?php echo $descrizione_motto_3 ?></p>
           </div>
         </div>
       </div>
     </div>
 
+
+//Middle Section
     <div class="section-container section-half-background-image-container">
       <div
         class="image-column"
-        style="background-image: url('./assets/images/img-01.jpg')"
+        style="background-image: url('<?php echo $middle_section_background['url'] ?>')"
       ></div>
       <div class="container">
         <div class="row">
           <div class="section-label reveal">
-            <p>Coworking</p>
+            <p><?php echo $middle_section_vertical_title ?></p>
           </div>
           <div class="col-md-6 col-md-offset-6 text-column">
-            <h2>Dui augue orci</h2>
-            <h3>Lorem ipsum</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus ut lacus tellus. In pretium
-              lobortis blandit. Nam eu laoreet velit. Vivamus laoreet, sem nec
-              scelerisque elementum, dui augue aliquet urna, ut bibendum purus
-              erat ut massa. Mauris diam orci, feugiat a turpis et, congue
-              accumsan risus. Nulla malesuada leo sodales, auctor augue quis,
-              condimentum lacus. Phasellus sed sollicitudin quam, a bibendum
-              urna.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus « ut lacus » tellus. In pretium
-              lobortis blandit.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus ut lacus tellus. In pretium
-              lobortis blandit.
-            </p>
+            <h2><?php echo $middle_section_title ?></h2>
+            <h3><?php echo $middle_section_subtitle?></h3>
+            <p> <?php echo $middle_section_para_1 ?></p>
+            <p> <?php echo $middle_section_para_2 ?></p>
+            <p> <?php echo $middle_section_para_3 ?></p>
           </div>
         </div>
       </div>
     </div>
 
+//Salon Section
     <div class="section-container">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-12 section-container-spacer">
-            <h2 class="text-center">Consectetur adipiscing</h2>
+            <h2 class="text-center"><?php echo $salon_main_title ?></h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-md-4">
             <img
-              src="./assets/images/img-02.jpg"
+              src="<?php echo $salon_image_1['url'] ?>"
               alt=""
               class="img-responsive"
             />
-            <h3 class="text-center">Consectetur</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus ut lacus tellus. In pretium
-              lobortis blandit.
-            </p>
+            <h3 class="text-center"><?php echo $salon_title_1 ?></h3>
+            <p><?php echo $salon_description_1 ?></p>
           </div>
 
           <div class="col-xs-12 col-md-4">
             <img
-              src="./assets/images/img-03.jpg"
+              src="<?php echo $salon_image_2['url'] ?>"
               alt=""
               class="img-responsive"
             />
-            <h3 class="text-center">Malesuada</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus ut lacus tellus. In pretium
-              lobortis blandit.
-            </p>
+            <h3 class="text-center"><?php echo $salon_title_2 ?></h3>
+           <p><?php echo $salon_description_2 ?></p>
           </div>
           <div class="col-xs-12 col-md-4">
             <img
-              src="./assets/images/img-04.jpg"
+              src="<?php echo $salon_image_3['url'] ?>"
               alt=""
               class="img-responsive"
             />
-            <h3 class="text-center">Phasellus</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-              amet consectetur dolor. Phasellus ut lacus tellus. In pretium
-              lobortis blandit.
-            </p>
+            <h3 class="text-center"><?php echo $salon_title_3 ?></h3>
+           <p><?php echo $salon_description_3 ?></p>
           </div>
         </div>
       </div>
     </div>
 
+//Map Section
     <div class="">
       <div class="container-fluid">
         <div class="row map-container">
@@ -161,19 +164,19 @@
           <div class="col-xs-10 col-md-4 contact-block-container reveal">
             <div class="row">
               <div class="col-xs-12 col-sm-6">
-                <h3>Phone</h3>
-                <p>+ 123 45 67 890</p>
+                <h3>Telefono</h3>
+                <p><?php echo $phone ?></p>
 
                 <h3>E-mail</h3>
-                <p>hello@email.com</p>
+                <p><?php echo $email ?></p>
               </div>
 
               <div class="col-xs-12 col-sm-6">
-                <h3>Address</h3>
-                <p>42 rue rouelle 75015, Paris</p>
+                <h3>Indirizzo</h3>
+                <p><?php echo $address ?></p>
 
-                <h3>Open hours</h3>
-                <p>Mon - Fri : 9AM - 5PM</p>
+                <h3>Orari d'apertura</h3>
+                <p><?php echo $open_hours ?></p>
               </div>
             </div>
           </div>
@@ -181,6 +184,7 @@
       </div>
     </div>
 
+//Get in touch
     <div class="section-container" id="contact-section-container">
       <div class="container contact-form-container">
         <div class="row">
